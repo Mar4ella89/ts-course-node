@@ -3,9 +3,9 @@ import express from "express";
 import { useExpressServer } from "routing-controllers";
 
 // Імпортуємо наш інтерфейс сервісу і контролери
-import { IService } from "types/services"; 
-import { controllers } from "app/domain";
-import { middlewares } from "app/middlewares"; 
+import { IService } from "types/services";
+import { controllers } from "app/domain"; 
+import { middlewares } from "app/middlewares";
 
 // Оголошуємо клас Tcp, який реалізує інтерфейс IService
 export class Tcp implements IService {

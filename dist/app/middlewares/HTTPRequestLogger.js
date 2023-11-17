@@ -8,13 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HTTPRequestLogger = void 0;
 const routing_controllers_1 = require("routing-controllers");
-let HTTPRequestLogger = exports.HTTPRequestLogger = class HTTPRequestLogger {
+let HTTPRequestLogger = class HTTPRequestLogger {
     use(request, _response, next) {
         const { originalUrl, method, body } = request;
         console.log(`Received request: method=${method} path=${originalUrl}`, JSON.stringify(body));
         next();
     }
 };
+exports.HTTPRequestLogger = HTTPRequestLogger;
 exports.HTTPRequestLogger = HTTPRequestLogger = __decorate([
     (0, routing_controllers_1.Middleware)({ type: "before" })
 ], HTTPRequestLogger);
